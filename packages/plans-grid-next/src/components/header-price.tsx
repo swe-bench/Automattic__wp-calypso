@@ -21,7 +21,7 @@ const PricesGroup = styled.div< { isLargeCurrency: boolean } >`
 	gap: 4px;
 `;
 
-const Badge = styled.div< { isForIntroOffer?: boolean; isHidden?: boolean } >`
+const Badge = styled.div< { isHidden?: boolean } >`
 	text-align: center;
 	white-space: nowrap;
 	font-size: 0.75rem;
@@ -30,15 +30,13 @@ const Badge = styled.div< { isForIntroOffer?: boolean; isHidden?: boolean } >`
 	height: 21px;
 	display: inline-block;
 	width: fit-content;
-	letter-spacing: ${ ( { isForIntroOffer } ) => ( isForIntroOffer ? 'inherit' : '0.2px' ) };
-	font-weight: ${ ( { isForIntroOffer } ) => ( isForIntroOffer ? 600 : 500 ) };
-	text-align: ${ ( { isForIntroOffer } ) => ( isForIntroOffer ? 'left' : 'center' ) };
-	padding: ${ ( { isForIntroOffer } ) => ( isForIntroOffer ? 0 : '0 12px' ) };
-	background-color: ${ ( { isForIntroOffer } ) =>
-		isForIntroOffer ? 'inherit' : 'var( --studio-green-0 )' };
-	color: ${ ( { isForIntroOffer } ) =>
-		isForIntroOffer ? 'var( --studio-blue-50 )' : 'var( --studio-green-40 )' };
-	text-transform: ${ ( { isForIntroOffer } ) => ( isForIntroOffer ? 'uppercase' : 'none' ) };
+	letter-spacing: 0.2px;
+	font-weight: 500;
+	text-align: center;
+	padding: 0 12px;
+	background-color: var( --studio-green-0 );
+	color: var( --studio-green-40 );
+	text-transform: none;
 	visibility: ${ ( { isHidden } ) => ( isHidden ? 'hidden' : 'visible' ) };
 `;
 
@@ -172,7 +170,7 @@ const PlanFeatures2023GridHeaderPrice = ( {
 		return (
 			<HeaderPriceContainer>
 				{ ! current && (
-					<Badge className="plan-features-2023-grid__badge" isForIntroOffer>
+					<Badge className="plan-features-2023-grid__badge">
 						{ translate( 'Limited Time Offer' ) }
 					</Badge>
 				) }
