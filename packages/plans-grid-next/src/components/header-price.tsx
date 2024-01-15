@@ -178,12 +178,11 @@ const PlanFeatures2023GridHeaderPrice = ( {
 					<PricesGroup isLargeCurrency={ isLargeCurrency }>
 						<PlanPrice
 							currencyCode={ currencyCode }
-							rawPrice={ 0 }
+							rawPrice={ originalPrice.monthly }
 							displayPerMonthNotation={ false }
 							isLargeCurrency={ isLargeCurrency }
 							isSmallestUnit
 							priceDisplayWrapperClassName="plans-grid-2023__html-price-display-wrapper"
-							className="is-placeholder-price" // This is a placeholder price to keep the layout consistent
 							original
 						/>
 						<PlanPrice
