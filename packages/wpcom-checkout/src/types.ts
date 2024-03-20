@@ -135,6 +135,7 @@ export interface TransactionRequest {
 	gstin?: string | undefined;
 	nik?: string | undefined;
 	useForAllSubscriptions?: boolean;
+	isForBusiness?: boolean;
 	eventSource?: string;
 }
 
@@ -180,6 +181,7 @@ export type WPCOMTransactionEndpointPaymentDetails = {
 	streetNumber?: string;
 	phoneNumber?: string;
 	document?: string;
+	isForBusiness?: boolean;
 	deviceId?: string;
 	successUrl?: string;
 	cancelUrl?: string;
@@ -227,6 +229,7 @@ export type PossiblyCompleteDomainContactDetails = {
 	state: string | null;
 	postalCode: string | null;
 	countryCode: string | null;
+	isForBusiness?: boolean | null;
 	fax: string | null;
 	extra?: ManagedContactDetailsTldExtraFieldsShape< string | null >;
 };
@@ -243,6 +246,7 @@ export type DomainContactDetailsErrors = {
 	state?: string | TranslateResult;
 	postalCode?: string | TranslateResult;
 	countryCode?: string | TranslateResult;
+	isForBusiness?: boolean;
 	fax?: string | TranslateResult;
 	vatId?: string | TranslateResult;
 	extra?: DomainContactDetailsErrorsExtra;
@@ -373,6 +377,7 @@ export type ManagedContactDetailsShape< T > = {
 	countryCode?: T;
 	fax?: T;
 	vatId?: T;
+	isForBusiness?: boolean;
 	tldExtraFields?: ManagedContactDetailsTldExtraFieldsShape< T >;
 };
 
