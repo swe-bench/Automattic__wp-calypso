@@ -211,6 +211,7 @@ export interface RawCachedDomainContactDetails {
 	country_code?: string;
 	fax?: string;
 	vat_id?: string;
+	is_for_business?: boolean;
 	extra?: DomainContactValidationRequestExtraFields;
 }
 
@@ -522,6 +523,7 @@ export type ContactValidationRequestContactInformation = {
 	postal_code?: string;
 	state?: string;
 	vat_id?: string;
+	is_for_business?: boolean;
 };
 
 export type DomainContactValidationRequest = {
@@ -543,6 +545,7 @@ export type GSuiteContactValidationRequest = {
 		phone?: string;
 		phone_number_country?: string;
 		state?: string;
+		is_for_business?: boolean;
 		vat_id?: string;
 	};
 };
@@ -602,6 +605,7 @@ export type ContactValidationResponseMessages = {
 	country_code?: string[];
 	fax?: string[];
 	vat_id?: string[];
+	is_for_business?: string[];
 	extra?: ContactValidationResponseMessagesExtra;
 };
 
