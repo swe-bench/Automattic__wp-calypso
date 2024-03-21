@@ -135,7 +135,6 @@ export interface TransactionRequest {
 	gstin?: string | undefined;
 	nik?: string | undefined;
 	useForAllSubscriptions?: boolean;
-	isForBusiness?: boolean;
 	eventSource?: string;
 }
 
