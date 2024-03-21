@@ -211,7 +211,6 @@ export interface RawCachedDomainContactDetails {
 	country_code?: string;
 	fax?: string;
 	vat_id?: string;
-	is_for_business?: boolean;
 	extra?: DomainContactValidationRequestExtraFields;
 }
 
@@ -230,7 +229,6 @@ export type PossiblyCompleteDomainContactDetails = {
 	state: string | null;
 	postalCode: string | null;
 	countryCode: string | null;
-	isForBusiness?: boolean | null;
 	fax: string | null;
 	extra?: ManagedContactDetailsTldExtraFieldsShape< string | null >;
 };
@@ -247,7 +245,6 @@ export type DomainContactDetailsErrors = {
 	state?: string | TranslateResult;
 	postalCode?: string | TranslateResult;
 	countryCode?: string | TranslateResult;
-	isForBusiness?: boolean;
 	fax?: string | TranslateResult;
 	vatId?: string | TranslateResult;
 	extra?: DomainContactDetailsErrorsExtra;
@@ -378,7 +375,6 @@ export type ManagedContactDetailsShape< T > = {
 	countryCode?: T;
 	fax?: T;
 	vatId?: T;
-	isForBusiness?: boolean;
 	tldExtraFields?: ManagedContactDetailsTldExtraFieldsShape< T >;
 };
 
@@ -399,6 +395,7 @@ export type ManagedContactDetailsTldExtraFieldsShape< T > = {
 		trademarkNumber?: T;
 		sirenSiret?: T;
 	};
+	isForBusiness: boolean;
 };
 
 /*
@@ -523,7 +520,6 @@ export type ContactValidationRequestContactInformation = {
 	postal_code?: string;
 	state?: string;
 	vat_id?: string;
-	is_for_business?: boolean;
 };
 
 export type DomainContactValidationRequest = {
@@ -545,7 +541,6 @@ export type GSuiteContactValidationRequest = {
 		phone?: string;
 		phone_number_country?: string;
 		state?: string;
-		is_for_business?: boolean;
 		vat_id?: string;
 	};
 };
@@ -567,6 +562,7 @@ export type DomainContactValidationRequestExtraFields = {
 		trademark_number?: string;
 		siren_siret?: string;
 	};
+	is_for_business?: boolean;
 };
 
 export type ContactValidationResponseMessagesExtra = {
@@ -585,6 +581,7 @@ export type ContactValidationResponseMessagesExtra = {
 		trademark_number?: string[];
 		siren_siret?: string[];
 	};
+	is_for_business?: boolean;
 };
 
 /**
@@ -605,7 +602,6 @@ export type ContactValidationResponseMessages = {
 	country_code?: string[];
 	fax?: string[];
 	vat_id?: string[];
-	is_for_business?: string[];
 	extra?: ContactValidationResponseMessagesExtra;
 };
 
