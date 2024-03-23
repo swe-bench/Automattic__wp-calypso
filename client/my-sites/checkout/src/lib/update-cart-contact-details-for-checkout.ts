@@ -1,11 +1,7 @@
 import { getCountryPostalCodeSupport, getCountryTaxRequirements } from '@automattic/wpcom-checkout';
 import debugFactory from 'debug';
 import getContactDetailsType from '../lib/get-contact-details-type';
-import type {
-	CartLocation,
-	ResponseCart,
-	UpdateTaxLocationInCart,
-} from '@automattic/shopping-cart';
+import type { ResponseCart, UpdateTaxLocationInCart } from '@automattic/shopping-cart';
 import type {
 	ManagedContactDetails,
 	CountryListItem,
@@ -68,7 +64,7 @@ export async function updateCartContactDetailsForCheckout(
 		( taxRequirements.address ? contactInfo.address1?.value : undefined ) ??
 		'';
 
-	const cartLocationData: CartLocation = {
+	const cartLocationData = {
 		// Typically the contact country code and the VAT country code will be the
 		// same, but the VAT form has special country codes it sometimes uses like
 		// `XI` for Northern Ireland so we keep track of them separately and will
