@@ -35,7 +35,8 @@ const ChatMessage = (
 	ref: React.Ref< HTMLDivElement >
 ) => {
 	const isUser = message.role === 'user';
-	const { botName, extraContactOptions, addMessage, trackEvent } = useOdieAssistantContext();
+	const { botName, extraContactOptions, addMessage, trackEvent, screenShot } =
+		useOdieAssistantContext();
 	const [ scrolledToBottom, setScrolledToBottom ] = useState( false );
 	const [ isFullscreen, setIsFullscreen ] = useState( false );
 	const currentUser = useSelector( getCurrentUser ) ?? {
@@ -286,6 +287,19 @@ const ChatMessage = (
 							) }
 						</Markdown>
 						{ extraContactOptions }
+					</>
+				) }
+				{ message.type === 'screenshot' && (
+					<>
+						<Markdown
+							urlTransform={ uriTransformer }
+							components={ {
+								a: CustomALink,
+							} }
+						>
+							{ message.content }
+						</Markdown>
+						<img src={ screenShot } alt="Screenshot" />
 					</>
 				) }
 				{ shouldRenderExtraContactOptions && extraContactOptions }

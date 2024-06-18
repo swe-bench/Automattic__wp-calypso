@@ -18,7 +18,7 @@ export const ODIE_THUMBS_UP_RATING_VALUE = 1;
 const ForwardedChatMessage = forwardRef< HTMLDivElement, ChatMessageProps >( ChatMessage );
 
 export const OdieAssistant: React.FC = () => {
-	const { chat, trackEvent } = useOdieAssistantContext();
+	const { chat, trackEvent, isMinimized, screenShot } = useOdieAssistantContext();
 	const chatboxMessagesRef = useRef< HTMLDivElement | null >( null );
 	const { ref: bottomRef, entry: lastMessageElement, inView } = useInView( { threshold: 0 } );
 	const [ stickToBottom, setStickToBottom ] = useState( true );
@@ -87,17 +87,34 @@ export const OdieAssistant: React.FC = () => {
 								message={ message }
 								key={ index }
 								scrollToBottom={ scrollToBottom }
-								ref={ chat.messages.length - 1 === index ? bottomRef : undefined }
+								ref={
+									chat.messages.length - 1 === index && screenShot !== undefined
+										? bottomRef
+										: undefined
+								}
 							/>
 						);
 					} ) }
+					{ screenShot !== undefined && (
+						<div className="chatbox-screenshot" ref={ bottomRef }>
+							<img src={ screenShot } alt="Screenshot" />
+							<p className="disclaimer">
+								{ i18n.translate( 'Provide a description in your next message', {
+									context: 'Text displayed when a screenshot is shared in chat',
+									textOnly: true,
+								} ) }
+							</p>
+						</div>
+					) }
 				</div>
-				<OdieSendMessageButton
-					scrollToBottom={ scrollToBottom }
-					scrollToRecent={ scrollToInitialBlockOfLastMessage }
-					enableStickToBottom={ () => setStickToBottom( true ) }
-					enableJumpToRecent={ ! inView }
-				/>
+				{ ! isMinimized && (
+					<OdieSendMessageButton
+						scrollToBottom={ scrollToBottom }
+						scrollToRecent={ scrollToInitialBlockOfLastMessage }
+						enableStickToBottom={ () => setStickToBottom( true ) }
+						enableJumpToRecent={ ! inView }
+					/>
+				) }
 			</div>
 		</div>
 	);

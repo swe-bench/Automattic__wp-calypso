@@ -7,6 +7,7 @@ import {
 } from '../data';
 import { getOdieInitialMessage } from './get-odie-initial-message';
 import { useLoadPreviousChat } from './use-load-previous-chat';
+import useScreenshot from './useScreenshot';
 import type { Chat, Context, Message, Nudge, OdieAllowedBots } from '../types';
 import type { ReactNode, FC, PropsWithChildren, SetStateAction } from 'react';
 
@@ -24,12 +25,14 @@ type OdieAssistantContextInterface = {
 	botNameSlug: OdieAllowedBots;
 	chat: Chat;
 	clearChat: () => void;
+	clearScreenShot: () => void;
+	createScreenShot: () => Promise< string >;
+	screenShot?: string;
 	initialUserMessage: string | null | undefined;
 	isLoadingChat: boolean;
 	isLoading: boolean;
 	isMinimized?: boolean;
 	isNudging: boolean;
-	isVisible: boolean;
 	extraContactOptions?: ReactNode;
 	lastNudge: Nudge | null;
 	odieClientId: string;
@@ -39,9 +42,11 @@ type OdieAssistantContextInterface = {
 	setIsLoadingChat: ( isLoadingChat: boolean ) => void;
 	setMessageLikedStatus: ( message: Message, liked: boolean ) => void;
 	setContext: ( context: Context ) => void;
+	setContainerVisibility?: ( isVisible: boolean ) => void;
 	setIsNudging: ( isNudging: boolean ) => void;
-	setIsVisible: ( isVisible: boolean ) => void;
+	setIsMinimized: ( isMinimized: boolean ) => void;
 	setIsLoading: ( isLoading: boolean ) => void;
+	setScreenShot: ( screenShot: string | undefined ) => void;
 	trackEvent: ( event: string, properties?: Record< string, unknown > ) => void;
 	updateMessage: ( message: Message ) => void;
 	version?: string | null;
@@ -53,12 +58,13 @@ const defaultContextInterfaceValues = {
 	botNameSlug: 'wpcom-support-chat' as OdieAllowedBots,
 	chat: { context: { section_name: '', site_id: null }, messages: [] },
 	clearChat: noop,
+	clearScreenShot: noop,
+	createScreenShot: async () => '',
 	initialUserMessage: null,
 	isLoadingChat: false,
 	isLoading: false,
 	isMinimized: false,
 	isNudging: false,
-	isVisible: false,
 	lastNudge: null,
 	odieClientId: '',
 	sendNudge: noop,
@@ -66,9 +72,10 @@ const defaultContextInterfaceValues = {
 	setIsLoadingChat: noop,
 	setMessageLikedStatus: noop,
 	setContext: noop,
+	setIsMinimized: noop,
 	setIsNudging: noop,
-	setIsVisible: noop,
 	setIsLoading: noop,
+	setScreenShot: noop,
 	trackEvent: noop,
 	updateMessage: noop,
 };
@@ -94,6 +101,7 @@ type OdieAssistantProviderProps = {
 	logger?: ( message: string, properties: Record< string, unknown > ) => void;
 	loggerEventNamePrefix?: string;
 	selectedSiteId?: number | null;
+	setIsMinimized?: ( isVisible: boolean ) => void;
 	version?: string | null;
 	children?: ReactNode;
 } & PropsWithChildren;
@@ -111,11 +119,20 @@ const OdieAssistantProvider: FC< OdieAssistantProviderProps > = ( {
 	version = null,
 	children,
 } ) => {
-	const [ isVisible, setIsVisible ] = useState( false );
 	const [ isLoading, setIsLoading ] = useState( false );
 	const [ isNudging, setIsNudging ] = useState( false );
 	const [ lastNudge, setLastNudge ] = useState< Nudge | null >( null );
+	const [ screenShot, setScreenShot ] = useState< string | undefined >( undefined );
+	const screenShotHandler = useCallback(
+		( screenShot: string | undefined ) => {
+			setScreenShot( screenShot );
+		},
+		[ setScreenShot ]
+	);
+
 	const existingChatIdString = useGetOdieStorage( 'chat_id' );
+	const { createScreenShot } = useScreenshot( screenShotHandler );
+	const clearScreenShot = useCallback( () => setScreenShot( undefined ), [] );
 
 	const existingChatId = existingChatIdString ? parseInt( existingChatIdString, 10 ) : null;
 	const existingChat = useLoadPreviousChat( botNameSlug, existingChatId );
@@ -219,29 +236,32 @@ const OdieAssistantProvider: FC< OdieAssistantProviderProps > = ( {
 	return (
 		<OdieAssistantContext.Provider
 			value={ {
+				createScreenShot,
 				addMessage,
 				botName,
 				botNameSlug,
 				chat,
 				clearChat,
+				clearScreenShot,
 				extraContactOptions,
 				initialUserMessage,
 				isLoadingChat: false,
 				isLoading: isLoading,
 				isMinimized,
 				isNudging,
-				isVisible,
 				lastNudge,
 				odieClientId,
+				screenShot,
 				selectedSiteId,
 				sendNudge: setLastNudge,
 				setChat,
 				setIsLoadingChat: noop,
 				setMessageLikedStatus,
 				setContext: noop,
+				setIsMinimized: noop,
 				setIsLoading,
 				setIsNudging,
-				setIsVisible,
+				setScreenShot,
 				trackEvent,
 				updateMessage,
 				version: overridenVersion,

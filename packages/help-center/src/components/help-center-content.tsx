@@ -5,7 +5,7 @@
 import { recordTracksEvent } from '@automattic/calypso-analytics';
 import OdieAssistantProvider, { useSetOdieStorage } from '@automattic/odie-client';
 import { CardBody, Disabled } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
+import { useSelect, useDispatch } from '@wordpress/data';
 import { useEffect, useRef } from '@wordpress/element';
 import React, { useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -56,6 +56,7 @@ const HelpCenterContent: React.FC< { isRelative?: boolean; currentRoute?: string
 		};
 	}, [] );
 	const selectedSiteId = useSelector( getSelectedSiteId );
+	const { setIsMinimized } = useDispatch( HELP_CENTER_STORE );
 
 	useEffect( () => {
 		recordTracksEvent( 'calypso_helpcenter_page_open', {
@@ -118,6 +119,7 @@ const HelpCenterContent: React.FC< { isRelative?: boolean; currentRoute?: string
 						path="/odie"
 						element={
 							<OdieAssistantProvider
+								setIsMinimized={ setIsMinimized }
 								botNameSlug="wpcom-support-chat"
 								botName="Wapuu"
 								enabled={ isWapuuEnabled }
