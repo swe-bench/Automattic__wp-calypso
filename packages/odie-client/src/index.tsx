@@ -88,7 +88,7 @@ export const OdieAssistant: React.FC = () => {
 								key={ index }
 								scrollToBottom={ scrollToBottom }
 								ref={
-									chat.messages.length - 1 === index && screenShot !== undefined
+									chat.messages.length - 1 === index && screenShot === undefined
 										? bottomRef
 										: undefined
 								}
