@@ -474,7 +474,6 @@ const siteMigration: Flow = {
 
 		return { goBack, submit, exitFlow };
 	},
-	use__Temporary__ShouldTrackEvent: ( event ) => 'submit' === event,
 };
 
 export default siteMigration;

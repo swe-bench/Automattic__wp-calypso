@@ -147,7 +147,6 @@ const connectDomain: Flow = {
 			submit,
 		};
 	},
-	use__Temporary__ShouldTrackEvent: ( event ) => 'submit' === event,
 };
 
 export default connectDomain;
