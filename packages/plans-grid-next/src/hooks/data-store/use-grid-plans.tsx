@@ -277,7 +277,7 @@ const useGridPlans: UseGridPlansType = ( {
 		selectedPlan,
 		plansAvailabilityForPurchase,
 		highlightLabelOverrides,
-		isDomainOnlySite,
+		isDomainOnlySite: isDomainOnlySite || false,
 	} );
 
 	// TODO: pricedAPIPlans to be queried from data-store package
