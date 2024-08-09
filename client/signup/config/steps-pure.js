@@ -107,6 +107,7 @@ export function generateSteps( {
 			optionalDependencies: [ 'themeSlugWithRepo' ],
 			props: {
 				intent: 'plans-site-selected-legacy',
+				deemphasizeFreePlan: true,
 			},
 		},
 
