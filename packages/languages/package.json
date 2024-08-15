@@ -35,7 +35,7 @@
 		"@automattic/calypso-eslint-overrides": "workspace:^",
 		"@automattic/calypso-typescript-config": "workspace:^",
 		"jest": "^29.7.0",
-		"postcss": "^8.4.5",
+		"postcss": "^8.4.41",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"redux": "^4.2.1",

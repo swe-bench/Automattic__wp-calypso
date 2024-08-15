@@ -162,7 +162,7 @@ __metadata:
     moment: "npm:^2.26.0"
     node-fetch: "npm:^2.6.6"
     path-browserify: "npm:^1.0.1"
-    postcss: "npm:^8.3.11"
+    postcss: "npm:^8.4.41"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -306,7 +306,7 @@ __metadata:
     webpack-cli: "npm:^4.10.0"
     yargs: "npm:^17.7.2"
   peerDependencies:
-    postcss: ^8.4.5
+    postcss: ^8.4.41
     webpack: ^5.91.0
   bin:
     build-app-languages: ./bin/build-app-languages.js
@@ -323,7 +323,7 @@ __metadata:
     "@automattic/calypso-eslint-overrides": "workspace:^"
     "@automattic/calypso-typescript-config": "workspace:^"
     "@automattic/color-studio": "npm:2.6.0"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     postcss-custom-properties: "npm:^11.0.0"
     sass: "npm:^1.37.5"
   languageName: unknown
@@ -575,7 +575,7 @@ __metadata:
     mkdirp: "npm:^1.0.4"
     node-fetch: "npm:^2.6.6"
     npm-run-all: "npm:^4.1.5"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     redux: "npm:^4.2.1"
@@ -649,7 +649,7 @@ __metadata:
     gridicons: "npm:^3.4.2"
     i18n-calypso: "workspace:^"
     lodash: "npm:^4.17.21"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     prop-types: "npm:^15.7.2"
     qrcode.react: "npm:^3.1.0"
     react-modal: "npm:^3.16.1"
@@ -764,7 +764,7 @@ __metadata:
     "@automattic/onboarding": "workspace:^"
     "@tanstack/react-query": "npm:^5.15.5"
     clsx: "npm:^2.1.1"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     redux: "npm:^4.2.1"
@@ -806,7 +806,7 @@ __metadata:
     "@wordpress/url": "npm:^4.2.0"
     clsx: "npm:^2.1.1"
     jest: "npm:^29.7.0"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-intersection-observer: "npm:^9.4.3"
@@ -914,7 +914,7 @@ __metadata:
     "@wordpress/react-i18n": "npm:^4.2.0"
     clsx: "npm:^2.1.1"
     jest: "npm:^29.7.0"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-intersection-observer: "npm:^9.4.3"
@@ -1173,7 +1173,7 @@ __metadata:
     "@testing-library/react": "npm:^15.0.7"
     clsx: "npm:^2.1.1"
     debug: "npm:^4.3.4"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.3.3"
@@ -1227,7 +1227,7 @@ __metadata:
     "@automattic/calypso-eslint-overrides": "workspace:^"
     "@automattic/calypso-typescript-config": "workspace:^"
     jest: "npm:^29.7.0"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     redux: "npm:^4.2.1"
@@ -1260,7 +1260,7 @@ __metadata:
     "@wordpress/components": "npm:^28.2.0"
     clsx: "npm:^2.1.1"
     i18n-calypso: "workspace:^"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     redux: "npm:^4.2.1"
@@ -1296,7 +1296,7 @@ __metadata:
     clsx: "npm:^2.1.1"
     msw: "npm:^2.1.7"
     msw-storybook-addon: "npm:2.0.2"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     redux: "npm:^4.2.1"
@@ -1379,7 +1379,7 @@ __metadata:
     debug: "npm:^4.3.3"
     html-webpack-plugin: "npm:^5.6.0"
     i18n-calypso: "workspace:^"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     postcss-custom-properties: "npm:^11.0.0"
     prop-types: "npm:^15.7.2"
     react: "npm:^18.2.0"
@@ -1421,7 +1421,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     moment: "npm:^2.26.0"
     new-github-issue-url: "npm:^0.2.1"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     redux: "npm:^4.2.1"
@@ -1491,7 +1491,7 @@ __metadata:
     moment: "npm:^2.26.0"
     node-fetch: "npm:^2.6.6"
     path-browserify: "npm:^1.0.1"
-    postcss: "npm:^8.3.11"
+    postcss: "npm:^8.4.41"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -1611,7 +1611,7 @@ __metadata:
     webpack: "npm:^5.91.0"
   peerDependencies:
     "@wordpress/i18n": ^5.2.0
-    postcss: ^8.4.5
+    postcss: ^8.4.41
     react: ^18.2.0
     react-dom: ^18.2.0
   languageName: unknown
@@ -1668,7 +1668,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:^6.4.5"
     "@testing-library/react": "npm:^15.0.7"
     clsx: "npm:^2.1.1"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     require-from-string: "npm:^2.0.2"
     typescript: "npm:^5.3.3"
     webpack: "npm:^5.91.0"
@@ -1785,7 +1785,7 @@ __metadata:
     "@wordpress/element": "npm:^6.2.0"
     "@wordpress/i18n": "npm:^5.2.0"
     clsx: "npm:^2.1.1"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     prop-types: "npm:^15.7.2"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -2021,7 +2021,7 @@ __metadata:
     mkdirp: "npm:^1.0.4"
     node-fetch: "npm:^2.6.6"
     npm-run-all: "npm:^4.1.5"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     redux: "npm:^4.2.1"
@@ -2119,7 +2119,7 @@ __metadata:
     debug: "npm:^4.3.3"
     lodash: "npm:^4.17.21"
     npm-run-all: "npm:^4.1.5"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     redux: "npm:^4.2.1"
@@ -10226,7 +10226,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     make-dir: "npm:^3.1.0"
     playwright: "npm:^1.37"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     semver: "npm:^7.3.2"
@@ -12266,7 +12266,7 @@ __metadata:
     photon: "workspace:^"
     phpunserialize: "npm:^1.1.0"
     pkg-dir: "npm:^5.0.0"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     prismjs: "npm:^1.26.0"
     prop-types: "npm:^15.7.2"
     qrcode.react: "npm:^3.1.0"
@@ -18422,7 +18422,7 @@ __metadata:
     copy-webpack-plugin: "npm:^10.2.4"
     glob: "npm:^7.1.6"
     i18n-calypso: "workspace:^"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     webpack: "npm:^5.91.0"
@@ -25173,10 +25173,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "picocolors@npm:1.0.0"
-  checksum: 20a5b249e331c14479d94ec6817a182fd7a5680debae82705747b2db7ec50009a5f6648d0621c561b0572703f84dbef0858abcbd5856d3c5511426afcb1961f7
+"picocolors@npm:^1.0.0, picocolors@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "picocolors@npm:1.0.1"
+  checksum: c63cdad2bf812ef0d66c8db29583802355d4ca67b9285d846f390cc15c2f6ccb94e8cb7eb6a6e97fc5990a6d3ad4ae42d86c84d3146e667c739a4234ed50d400
   languageName: node
   linkType: hard
 
@@ -25949,14 +25949,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.4, postcss@npm:^8.3.11, postcss@npm:^8.3.5, postcss@npm:^8.4.19, postcss@npm:^8.4.21, postcss@npm:^8.4.33, postcss@npm:^8.4.5":
-  version: 8.4.33
-  resolution: "postcss@npm:8.4.33"
+"postcss@npm:^8.2.4, postcss@npm:^8.3.11, postcss@npm:^8.3.5, postcss@npm:^8.4.19, postcss@npm:^8.4.21, postcss@npm:^8.4.33, postcss@npm:^8.4.41":
+  version: 8.4.41
+  resolution: "postcss@npm:8.4.41"
   dependencies:
     nanoid: "npm:^3.3.7"
-    picocolors: "npm:^1.0.0"
-    source-map-js: "npm:^1.0.2"
-  checksum: 16eda83458fcd8a91bece287b5920c7f57164c3ea293e6c80d0ea71ce7843007bcd8592260a5160b9a7f02693e6ac93e2495b02d8c7596d3f3f72c1447e3ba79
+    picocolors: "npm:^1.0.1"
+    source-map-js: "npm:^1.2.0"
+  checksum: c1828fc59e7ec1a3bf52b3a42f615dba53c67960ed82a81df6441b485fe43c20aba7f4e7c55425762fd99c594ecabbaaba8cf5b30fd79dfec5b52a9f63a2d690
   languageName: node
   linkType: hard
 
@@ -29293,10 +29293,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "source-map-js@npm:1.0.2"
-  checksum: 32f2dfd1e9b7168f9a9715eb1b4e21905850f3b50cf02cf476e47e4eebe8e6b762b63a64357896aa29b37e24922b4282df0f492e0d2ace572b43d15525976ff8
+"source-map-js@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "source-map-js@npm:1.2.0"
+  checksum: 7e5f896ac10a3a50fe2898e5009c58ff0dc102dcb056ed27a354623a0ece8954d4b2649e1a1b2b52ef2e161d26f8859c7710350930751640e71e374fe2d321a4
   languageName: node
   linkType: hard
 
@@ -32894,7 +32894,7 @@ __metadata:
     node-fetch: "npm:^2.6.6"
     npm-run-all: "npm:^4.1.5"
     photon: "workspace:^"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     postcss-cli: "npm:^9.0.1"
     postcss-custom-properties: "npm:^11.0.0"
     prettier: "npm:wp-prettier@3.0.3"
@@ -32998,7 +32998,7 @@ __metadata:
     "@automattic/calypso-eslint-overrides": "workspace:^"
     "@automattic/calypso-typescript-config": "workspace:^"
     debug: "npm:^4.3.3"
-    postcss: "npm:^8.4.5"
+    postcss: "npm:^8.4.41"
     uuid: "npm:^9.0.1"
     webpack: "npm:^5.91.0"
     wp-error: "npm:^1.3.0"
