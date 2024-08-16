@@ -245,7 +245,7 @@ export interface DashboardOverviewContextInterface {
 		showOnlyFavorites: boolean;
 		showOnlyDevelopmentSites: boolean;
 	};
-	sort: DashboardSortInterface;
+	sort?: DashboardSortInterface;
 	showSitesDashboardV2: boolean;
 }
 
