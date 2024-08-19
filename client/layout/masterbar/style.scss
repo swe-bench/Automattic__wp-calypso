@@ -338,7 +338,7 @@ body.is-mobile-app-view {
 	justify-content: center;
 
 	&.masterbar__reader {
-		padding: 0 10px;
+		padding: 0 8px;
 
 		.masterbar_svg-reader {
 			padding: 0 8px 0 3px;
@@ -775,7 +775,6 @@ body.is-mobile-app-view {
 
 			&.masterbar__item-howdy {
 				border-top-right-radius: 0;
-				padding: 0 10px;
 			}
 
 			&::before,
