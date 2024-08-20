@@ -28,13 +28,14 @@
 	"main": "dist/fp.cjs.js",
 	"module": "dist/fp.esm.js",
 	"types": "dist/fp.d.ts",
+	"calypso:src": "src/index.js",
 	"sideEffects": false,
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build": "rimraf dist && rollup -c rollup.config.ts --configPlugin '@rollup/plugin-typescript={tsconfig:`tsconfig.rollupConfig.json`}'",
-		"build:watch": "yarn build --watch",
+		"build": "tsc --build ./tsconfig.json ./tsconfig-cjs.json",
+		"build:watch": "tsc --build ./tsconfig.json --watch",
 		"playground:start": "cd playground && webpack-dev-server --mode development",
 		"playground:build": "cd playground && webpack --mode production",
 		"lint": "eslint --ext .js,.ts --ignore-path .gitignore --max-warnings 0 .",
