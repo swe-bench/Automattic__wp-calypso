@@ -115,16 +115,17 @@
 .payment-method-delete {
 	grid-area: payment-method-delete;
 	margin-top: 12px;
-	text-align: right;
 
 	@include breakpoint-deprecated( ">480px" ) {
 		margin-top: 0;
+		justify-self: flex-end;
 	}
 }
 
 .payment-method-delete__button {
 	text-decoration: underline;
 	padding: 0;
+	text-align: right;
 }
 
 .payment-method-delete-dialog {
@@ -146,8 +147,8 @@
 	@include breakpoint-deprecated( ">480px" ) {
 		margin-left: 0;
 		margin-top: 0;
-		text-align: right;
 		width: auto;
+		justify-self: flex-end;
 	}
 }
 
