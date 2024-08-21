@@ -162,6 +162,7 @@ export function testDomain(
 		subdomain_part: '',
 		auth_code_required: true,
 		is_mapped_to_atomic_site: false,
+		has_wpcom_managed_ssl_cert: false,
 		...defaults,
 	};
 
